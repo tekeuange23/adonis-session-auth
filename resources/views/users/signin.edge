@@ -1,0 +1,34 @@
+@layout('layouts/master')
+
+@section('main')
+    {{--  {{inspect(flashMessages)}}  --}}
+
+    <form method="POST" action="/signin">
+      <div class="container">
+        <h3>Sign Up</h3>
+        @if(!flashMessages.values)
+          <p>Please fill in this form to login to your account.</p>
+        @else
+          <p class="errorMessage">Email ou mot de passe incorrect.</p>
+        @endif
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <label>
+          <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
+        <p><a href="#" style="color:dodgerblue">Mot de passe oublier?</a>.</p>
+
+        <div class="clearfix">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign In</button>
+        </div>
+      </div>
+    </form>
+@endsection

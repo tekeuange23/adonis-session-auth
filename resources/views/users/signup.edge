@@ -1,0 +1,39 @@
+@layout('layouts/master')
+
+@section('main')
+    {{--  {{inspect(flashMessages)}}  --}}
+
+    <form method="POST" action="/users">
+      <div class="container">
+        <h3>Sign Up</h3>
+        @if(!flashMessages.values)
+          <p>Please fill in this form to create an account.</p>
+        @elseif(flashMessages.values.errors.email)
+          <p class="errorMessage">Email non valide.</p>
+        @else
+          <p class="errorMessage">Le mot de passe doit contenir au minimun 4 caracteres.</p>
+        @endif
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" value="{{flashMessages.values ? flashMessages.values.email : '' }}"required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <label for="passwordRepeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="passwordRepeat" required>
+
+        <label>
+          <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </div>
+    </form>
+@endsection

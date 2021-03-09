@@ -1,0 +1,38 @@
+@font-face {
+  font-family: Helvetica;
+  src: url("../fonts/helvetica.eot") format("eot");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  padding: 5px 20px;
+  background: #fff;
+  color: #000;
+  font-family: verdana, Helvetica, sans-serif;
+  line-height: 140%;
+  margin: 0;
+  background: linear-gradient(black, silver, white) no-repeat;
+}
+
+#block {
+  width: 1180px;
+  margin: 0 auto 20px auto;
+  padding: 20px 40px;
+  box-shadow: 5px 5px 15px #888888;
+  background-color: #fff;
+  border-radius: 12px;
+  line-height: 150%;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  font-style: 16px;
+  margin-bottom: 25px;
+}

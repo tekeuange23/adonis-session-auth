@@ -1,0 +1,94 @@
+#content {
+  position: relative;
+  margin-top: 20px;
+}
+
+/* ******************************************************************************************************* */
+.left {
+  width: 70%;
+  padding: 10px 40px 0 0px;
+  vertical-align: top;
+}
+.left,
+.right {
+  display: table-cell;
+}
+.subtitle {
+  display: block;
+}
+.subtitle,
+.subtitle > * {
+  height: 100%;
+}
+.subtitle h2 {
+  font-size: 24px;
+  color: #139c19;
+  margin: 35px 0 20px 0;
+  border-left: 30px solid;
+  border-radius: 50px;
+  padding: 10px 10px 10px 15px;
+}
+
+.split-prgph p{
+  column-count: 2;
+  column-gap: 40px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: rgb(111, 78, 29);
+}
+
+p[title="intro"] {
+  color: #777;
+  font-style: italic;
+}
+
+.img-g {
+  margin: 0 25px 10px -40px;
+  width: 54%;
+  float: left;
+}
+
+.ombre-img {
+  box-shadow: 1px 1px 15px #555;
+  max-width: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+
+  margin: 0px 0 35px 0;
+}
+.legende {
+  color: #666;
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: right;
+}
+/* ******************************************************************************************************* */
+.right {
+  width: 30%;
+  padding: 10px 0px 30px;
+  margin-left: 1%;
+  font-size: 0.9em;
+  border-left: #ccc 1px solid;
+  vertical-align: bottom;
+  box-shadow: -5px 6px 11px #ccc;
+}
+
+.figure-aside {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+.figure-aside img {
+  max-width: 100%;
+}
+.figure-aside figcaption {
+  padding: 5px 15px 10px 15px;
+}
+.figure-aside h2 {
+  margin: 0px 0 5px 0;
+  color: #139c19;
+}
